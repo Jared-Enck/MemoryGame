@@ -46,11 +46,11 @@ const createDivsForImgs = function (ImgArray) {
 
 const gameStart = function () {
   let storedBest = JSON.parse(localStorage.getItem("bestScore"));
-  if (storedBest){
-    bestScore = storedBest
+  if (storedBest === null){
+    bestScore = 10000;
   }
   else {
-    bestScore = 10000;
+  bestScore = storedBest
   }
   const HUD = document.createElement("div");
   HUD.classList.add("HUD");

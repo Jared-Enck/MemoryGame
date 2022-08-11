@@ -1,5 +1,7 @@
 let currScore = 0;
 let matches = 0;
+let bestScore = 10000;
+
 
 const resolve = function () {
   if (cardFlip2) {
@@ -34,11 +36,12 @@ const checkGameState = function () {
 };
 
 const endGame = function () {
+  localStorage.setItem("bestScore", JSON.stringify(bestScore));
   let storedBest = localStorage.getItem("bestScore", JSON.parse(bestScore));
   if (currScore < storedBest) {
     bestScore = currScore;
     scoreBarH3.innerText = `Best Score: ${bestScore}`;
-    localStorage.setItem("bestScore", JSON.stringify(bestScore));
+  localStorage.setItem("bestScore", JSON.stringify(bestScore));
   }
   const newGame = document.createElement("div");
   const NGBanner = document.createElement("h2");

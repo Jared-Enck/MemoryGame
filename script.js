@@ -46,7 +46,13 @@ const createDivsForImgs = function (ImgArray) {
 
 const gameStart = function () {
   let storedBest = localStorage.getItem("bestScore", JSON.parse(bestScore));
-  bestScore = storedBest;
+  console.log(storedBest)
+  if (storedBest > 0){
+    bestScore = storedBest
+  }
+  else {
+    bestScore = 10000
+  }
   const HUD = document.createElement("div");
   HUD.classList.add("HUD");
   scoreBarH2.innerText = `Score: ${currScore}`;

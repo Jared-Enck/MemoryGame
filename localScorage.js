@@ -36,13 +36,13 @@ const checkGameState = function () {
 };
 
 const endGame = function () {
-  localStorage.setItem("bestScore", JSON.stringify(bestScore));
-  let storedBest = localStorage.getItem("bestScore", JSON.parse(bestScore));
+  localStorage.getItem("bestScore");
+  let storedBest = JSON.parse(bestScore);
   if (currScore < storedBest) {
     bestScore = currScore;
-    scoreBarH3.innerText = `Best Score: ${bestScore}`;
-  localStorage.setItem("bestScore", JSON.stringify(bestScore));
   }
+  scoreBarH3.innerText = `Best Score: ${bestScore}`;
+  localStorage.setItem("bestScore", bestScore);
   const newGame = document.createElement("div");
   const NGBanner = document.createElement("h2");
   NGBanner.innerText = `You Scored: ${currScore} points!`;

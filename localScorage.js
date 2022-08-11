@@ -1,5 +1,4 @@
 let currScore = 0;
-let bestScore = 10000;
 let matches = 0;
 
 const resolve = function () {

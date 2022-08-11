@@ -1,0 +1,119 @@
+body{
+  margin-left: 25%;
+  margin-right: 25%;
+  background-image: url('imgs/background.jpg');
+  font-family: Almendra;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 0%;
+  font-size: 70px;
+  color: darkred;
+  text-shadow: 2px 1px 1px black;
+
+}
+.menu {
+  padding-top: 0%;
+  margin-top: 0%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5em;
+  color: blue;
+  text-shadow: 2px 1px 1px black;
+}
+.start {
+  position: absolute;
+  display: block;
+  margin-top: 20vh;
+  width: 220px;
+  height: 90px;
+  border: 5px solid rgba(255, 208, 0, 0.675);  ;
+  background-color: rgb(203, 173, 0);
+  padding: 10px 20px 10px 20px;
+  font-size: 3rem;
+  text-size-adjust: inherit;
+  cursor: pointer;
+  text-align: center;
+  font-family: Almendra;
+  border-radius: 20px;
+  text-shadow: 3px 2px 2px rgb(171, 123, 0);
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+ #game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 0%;
+}
+
+#game div {
+  border: 5px solid darkgoldenrod;
+  margin: 0%;
+  height: 200px;
+  width: 170px;
+  background-size: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5) ;
+}
+
+div .facedown {
+background-image: url("imgs/Sward.jpg");
+}
+
+.Finn {
+  background-image: url("imgs/Finn.jpg");
+}
+.IceKing {
+  background-image: url("imgs/IceKing.jpg");
+}
+.Jake {
+  background-image: url("imgs/Jake.jpg");
+}
+.LSP {
+  background-image: url("imgs/LSP.jpg");
+}
+.PBM {
+  background-image: url("imgs/PBM.jpg");
+}
+.BMO {
+  background-image: url("imgs/BMO.png");
+}
+
+.new-game {
+  position: absolute;
+  height: 400px;
+  width: 600px;
+  background-color: darkgrey;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.7);
+  margin-top: 45vh;
+  background-image: url('imgs/NGBackground.webp');
+  background-size: cover;
+  border: 5px solid slategray;
+}
+
+.ng-bttn {
+  position: relative;
+  margin-bottom: 5%;
+  width: 250px;
+  height: 90px;
+  border: 5px solid rgba(255, 208, 0, 0.675);
+  background-color: rgb(203, 173, 0);
+  padding: 10px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: Almendra;
+  border-radius: 20px;
+  text-shadow: 3px 2px 2px rgb(171, 123, 0);
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.new-game h2 {
+  margin-top: 15%;
+}

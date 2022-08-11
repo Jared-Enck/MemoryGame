@@ -45,8 +45,7 @@ const createDivsForImgs = function (ImgArray) {
 };
 
 const gameStart = function () {
-  localStorage.getItem("bestScore");
-  let storedBest = JSON.parse(bestScore);
+  let storedBest = JSON.parse(localStorage.getItem("bestScore"));
   if (storedBest){
     bestScore = storedBest
   }

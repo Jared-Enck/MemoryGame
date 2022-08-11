@@ -36,9 +36,7 @@ const checkGameState = function () {
 };
 
 const endGame = function () {
-  localStorage.getItem("bestScore");
-  let storedBest = JSON.parse(bestScore);
-  if (currScore < storedBest) {
+  if (currScore < bestScore) {
     bestScore = currScore;
   }
   scoreBarH3.innerText = `Best Score: ${bestScore}`;

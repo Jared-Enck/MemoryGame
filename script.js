@@ -43,17 +43,10 @@ const createDivsForImgs = function (ImgArray) {
     gameContainer.append(card);
   }
 };
-let bestScore = 10000;
 
 
 const gameStart = function () {
-  let storedBest = localStorage.getItem("bestScore", JSON.parse(bestScore));
-  if (storedBest < bestScore){
-    bestScore = storedBest
-  }
-  else {
-    bestScore = 10000
-  }
+  let bestScore = 10000;
   const HUD = document.createElement("div");
   HUD.classList.add("HUD");
   scoreBarH2.innerText = `Score: ${currScore}`;
@@ -61,6 +54,10 @@ const gameStart = function () {
   menu.append(HUD);
   HUD.appendChild(scoreBarH2);
   HUD.appendChild(scoreBarH3);
+  let storedBest = localStorage.getItem("bestScore", JSON.parse(bestScore));
+  if (storedBest){
+    bestScore = storedBest
+  }
 };
 
 startBttn.addEventListener("click", function () {

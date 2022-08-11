@@ -44,9 +44,9 @@ const createDivsForImgs = function (ImgArray) {
   }
 };
 
+let bestScore = 10000;
 
 const gameStart = function () {
-  let bestScore = 10000;
   const HUD = document.createElement("div");
   HUD.classList.add("HUD");
   scoreBarH2.innerText = `Score: ${currScore}`;

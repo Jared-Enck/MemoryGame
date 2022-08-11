@@ -1,6 +1,5 @@
 let currScore = 0;
 let matches = 0;
-let bestScore = 0;
 
 const resolve = function () {
   if (cardFlip2) {
